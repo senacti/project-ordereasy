@@ -25,4 +25,4 @@ El alcance de este informe se centrará en la evaluación y propuesta de solucio
 - Juan Diego Avila 
 - Sebastian Bohórquez
 - Julian Felipe Barbosa
-. Jhonatan Chaparro
+- Jhonatan Chaparro
