@@ -1,0 +1,35 @@
+.containerLL {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.categoryLL {
+    margin-bottom: 30px;
+}
+
+.categoryLL h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.carouselLL {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carouselLL img {
+    max-width: 100px;
+    margin: 0 10px;
+    border: 1px solid #000;
+}
+
+.carousel-infoLL {
+    text-align: center;
+}
+
+.arrowLL {
+    cursor: pointer;
+    font-size: 24px;
+}

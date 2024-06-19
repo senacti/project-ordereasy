@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RicaArepa</title>
+<link rel="stylesheet" href="../css/estilo.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="../js/bootstrap.bundle.js"></script>
+
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-custom ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">La Rica Arepa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../Index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Productos.html" role="button" data-bs-toggle="dropdown">Productos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Productos.html">Arepas</a></li>
+              <li><a class="dropdown-item" href="Productos.html">Bebidas</a></li>
+              <li><a class="dropdown-item" href="Productos.html">Caldos</a></li>
+              <li><a class="dropdown-item" href="Productos.html">Dulces</a></li>
+              <li><a class="dropdown-item" href="Productos.html">Combos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Quienes Somos.html">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contactenos.html">Contactenos</a>
+          </li>
+          
+        </ul>
+        
+        <form class="d-flex">
+          
+          <a class="enlace" href="html/IniciosesionR.html">Iniciar Sesión</a>
+          <a class="enlace" href="html/IniciosesionR.html">Regístrese</a>
+       
+          <span class="phone-number">Pide tu domicilio 3004750286</span>
+        </form>
+      </div>
+    </div>
+  </nav>
+      
+  <div class="container mt-5">
+    <h2>Formulario de PQRS</h2>
+    <form action="tuScriptDeProcesamiento.php" method="POST">
+        <div class="mb-3 mt-3">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico" name="correo" required>
+        </div>
+        <div class="mb-3">
+            <label for="tipoSolicitud">Tipo de solicitud:</label>
+            <select class="form-select" id="tipoSolicitud" name="tipoSolicitud" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Petición">Petición</option>
+                <option value="Queja">Queja</option>
+                <option value="Reclamo">Reclamo</option>
+                <option value="Sugerencia">Sugerencia</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" placeholder="Escribe tu mensaje aquí" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+
+</body>
+<footer>
+  <div class="footer-container">
+      <div class="social-media">
+          <!-- Suponiendo que quieres iconos para las redes sociales, podrías usar imágenes o iconos de una librería como Font Awesome -->
+          <a href="http://facebook.com" class="social-link">Facebook</a>
+          <a href="http://instagram.com" class="social-link">Instagram</a>
+      </div>
+      <div class="legal-links">
+          <a href="/privacidad">Política de privacidad</a>
+          <a href="/terminos">Términos y condiciones</a>
+          <a href="/proteccion-datos">Protección de datos personales</a>
+      </div>
+  </div>
+</footer>
+</html>
