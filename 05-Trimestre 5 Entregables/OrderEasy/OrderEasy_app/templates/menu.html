@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrderEasy - Menú</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+</head>
+<body>
+    <header>
+            <div class="logo-container">
+                <a href="{% url 'index' %}"> <img src="{% static 'imagenes/icono.png' %}" alt="Logo" height="50" width="100"></a>
+            <h1>Rápido y Delicioso</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'pedido' %}">Pedido</a></li>
+                <li><a href="{% url 'ofertas' %}">Ofertas</a></li>
+                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <section id="menu" class="menu">
+            <h2>Nuestro Menú</h2>
+            <div class="menu-grid">
+                {% for product in products %}
+                <div class="menu-item">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <p class="price">Precio: ${{ product.price }}</p>
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                    {% else %}
+                    <p>No hay imagen disponible</p>
+                    {% endif %}
+                </div>
+                {% empty %}
+                    <p>No hay productos en el menú.</p>
+                {% endfor %}
+            </div>
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OrderEasy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

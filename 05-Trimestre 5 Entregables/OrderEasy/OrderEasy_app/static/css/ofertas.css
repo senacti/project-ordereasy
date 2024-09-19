@@ -1,0 +1,127 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../imagenes/ofertas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #080808;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    color: #ff5e00;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ff5e00;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.offer-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff6200;
+}
+
+/* Offers Grid */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Offer Card */
+.offer-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.offer-header h2 {
+    font-size: 1.8rem;
+    color: #ff6200;
+    margin: 0;
+}
+
+.offer-body p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.offer-dates {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.offer-dates strong {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ff5e00;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

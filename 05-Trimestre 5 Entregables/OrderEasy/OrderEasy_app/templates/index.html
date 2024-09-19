@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrderEasy</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="{% url 'index' %}"> <img src="{% static 'imagenes/icono.png' %}" alt="Logo" height="50" width="100"></a>
+            <h1>Rápido y Delicioso</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'menu' %}">Menú</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="{% url 'ofertas' %}">Ofertas</a></li>
+                <li><a href="{% url 'pedido' %}">Pedido</a></li>
+                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h2>Bienvenidos a La Rica Arepa de Zoila</h2>
+        <p>Este lugar es conocido por sus arepas rellenas, ofreciendo una gran variedad de sabores, desde opciones tradicionales como dos quesos y la mixta, hasta combinaciones más actuales. Con un ambiente cálido y sencillo, el sitio invita a disfrutar de arepas recién preparadas, usando ingredientes frescos y buenos. El personal es amable y el menú permite elegir los rellenos al gusto del cliente, siendo un lugar ideal tanto para una comida rápida como para disfrutar de una comida tranquila.</p>
+    </section>
+    
+    <section id="nosotros" class="about-us">
+        <h2>Sobre Nosotros</h2>
+        <p>La Rica Arepa de Zoila es una empresa familiar que comenzó en 1995, cuando Zoila, una apasionada de la cocina tradicional, decidió compartir su amor por las arepas con su comunidad. Con una pequeña tienda y recetas caseras, pronto se ganó la reputación de ofrecer las mejores arepas rellenas, hechas siempre con ingredientes frescos y un toque casero inigualable. Con el paso de los años, su negocio creció, pero mantuvo el mismo compromiso con la calidad y el sabor que la caracterizan. Hoy, La Rica Arepa de Zoila es un referente local, conocido por su sabor auténtico y por mantener vivas las tradiciones.</p>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>Dirección: Calle 1 a sur # 8a - 39, Bogotá</p>
+        <p>Teléfono: (+57) 3009750286</p>
+        <p>Email: arepa_zoila21@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rápido y Delicioso. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

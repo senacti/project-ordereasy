@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Iniciar Sesión</title>
+</head>
+<header>
+    <div class="logo-container">
+        <a href="{% url 'index' %}"> <img src="{%static 'imagenes/icono.png'%}" alt= "" hright="50" width="100"></a>
+        <h1>Rápido y Delicioso</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'menu' %}">Menú</a></li>
+            <li><a href="{% url 'ofertas' %}">Ofertas</a></li>
+            <li><a href="{% url 'pedido' %}">Pedido</a></li>
+            <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+            <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="container">
+        <div class="login-form">
+            <h2>Iniciar Sesión</h2>
+            <p>Accede a tu cuenta para continuar</p>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" id="username" placeholder="Introduce tu usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Introduce tu contraseña" required>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+            </form>
+            <div class="links">
+                <a href="{% url 'password_reset' %}" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                <a href="{% url 'register' %}" class="register-link">Crear una cuenta</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

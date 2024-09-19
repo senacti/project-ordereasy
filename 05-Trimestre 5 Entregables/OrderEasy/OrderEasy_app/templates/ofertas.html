@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Exclusivas</title>
+    <link rel="stylesheet" href="{% static 'css/ofertas.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="{% url 'index' %}"> <img src="{% static 'imagenes/icono.png' %}" alt="Logo" height="50" width="100"></a>
+            <h1>Rápido y Delicioso</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'menu' %}">Menú</a></li>
+                <li><a href="{% url 'pedido' %}">Pedido</a></li>
+                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <div class="offer-container">
+            <h1>Ofertas Exclusivas</h1>
+            <div class="offers-grid">
+                {% if offers %}
+                    {% for offer in offers %}
+                        <div class="offer-card">
+                            <div class="offer-header">
+                                <h2>{{ offer.title }}</h2>
+                            </div>
+                            <div class="offer-body">
+                                <p>{{ offer.description }}</p>
+                                <p class="offer-dates">
+                                    <strong>Válido desde:</strong> {{ offer.start_date|date:"d/m/Y" }} 
+                                    <strong>hasta:</strong> {{ offer.end_date|date:"d/m/Y" }}
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No hay ofertas exclusivas disponibles en este momento.</p>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rápido y Delicioso. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

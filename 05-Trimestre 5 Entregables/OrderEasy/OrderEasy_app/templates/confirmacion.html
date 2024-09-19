@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Pedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .order-status {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .cancel-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cancel-button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Gracias por tu pedido!</h1>
+    <p>Hemos recibido tu pedido y lo estamos procesando.</p>
+
+    <!-- Mostrar el estado actual del pedido -->
+    <div class="order-status">
+        <p><strong>Estado actual de tu pedido:</strong> {{ pedido.estado }}</p>
+    </div>
+
+    <!-- Mostrar un botón para cancelar el pedido si es posible -->
+    {% if pedido.estado != 'Cancelado' and pedido.estado != 'Entregado' %}
+        <p>Si deseas cancelar tu pedido, puedes hacerlo haciendo clic en el botón de abajo:</p>
+        <form method="post" action="{% url 'cancelar_pedido' pedido.id %}">
+            {% csrf_token %}
+            <button type="submit" class="cancel-button">Cancelar Pedido</button>
+        </form>
+    {% else %}
+        <p>No puedes cancelar el pedido ya que ha sido {{ pedido.estado|lower }}.</p>
+    {% endif %}
+</body>
+</html>

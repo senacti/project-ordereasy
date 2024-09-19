@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Cancelación</title>
+</head>
+<body>
+    <h1>Confirmar Cancelación</h1>
+    <p>¿Estás seguro de que deseas cancelar el pedido con ID {{ pedido.id }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar Cancelación</button>
+    </form>
+    <a href="{% url 'confirmacion_pedido' pedido.id %}">Volver a la confirmación del pedido</a>
+</body>
+</html>

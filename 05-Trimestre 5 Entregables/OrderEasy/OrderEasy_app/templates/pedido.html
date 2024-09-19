@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realiza tu Pedido</title>
+    <link rel="stylesheet" href="{% static 'css/pedido.css' %}">
+</head>
+
+<body>
+    <main class="main-content">
+        <div class="container">
+            <h1>Realiza tu Pedido</h1>
+            <form method="POST" class="pedido-form">
+                {% csrf_token %}
+
+                <section class="form-section">
+                    <h2>Dirección de entrega</h2>
+                    <div class="form-group">
+                        <label for="direccion_entrega">Dirección</label>
+                        <input type="text" id="direccion_entrega" name="direccion_entrega" placeholder="Introduce tu dirección" required>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Selecciona tus productos</h2>
+                    <ul class="product-list">
+                        {% for producto in menu %}
+                            <li class="product-item">
+                                <input type="checkbox" id="producto_{{ producto.id }}" name="producto" value="{{ producto.id }}">
+                                <label for="producto_{{ producto.id }}">{{ producto.name }} - ${{ producto.price }}</label>
+                                <input type="number" name="cantidad_{{ producto.id }}" min="1" value="1" class="cantidad-input">
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+
+                <button type="submit" class="submit-btn">Hacer pedido</button>
+
+                {% if pedido %}
+                    <section class="confirmation-section">
+                        <h2>Confirmación de pedido</h2>
+                        <form action="{% url 'confirmacion_pedido' pedido.id %}" method="get">
+                            <button type="submit" class="confirmation-btn">Ver Confirmación de Pedido</button>
+                        </form>
+                    </section>
+                {% endif %}
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

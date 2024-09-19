@@ -1,0 +1,135 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url("../imagenes/register.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.register-form {
+    background-color: rgba(0, 0, 0, 0.85); /* Oscurecer fondo para mayor contraste */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container img {
+    max-width: 100px;
+    height: auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ff7b00;
+    text-align: center;
+}
+
+p {
+    color: #ff7b00;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ff7b00;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ff7b00;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #ff4d00;
+    outline: none;
+}
+
+button.btn-primary {
+    width: 100%;
+    background-color: #ff7b00;
+    border: none;
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #d35400;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .register-form {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button.btn-primary {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-form {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    button.btn-primary {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+}

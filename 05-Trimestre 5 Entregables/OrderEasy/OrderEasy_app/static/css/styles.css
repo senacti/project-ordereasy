@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("../imagenes/fondo_index1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: #ff7b00;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container h1 {
+    margin-left: 10px;
+    font-size: 2rem;
+    color: #ff7b00; 
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ff7b00; /* Color de los enlaces en la navegación */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("../imagenes/fondo_index1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Color de texto en la sección hero */
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff; /* Color de título en la sección hero */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 800px;
+    color: #ffffff; /* Color del texto en la sección hero */
+}
+
+/* Main Section */
+main {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+
+.about-us {
+    background-image: url("../imagenes/fondo_index2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Color de título en la sección sobre nosotros */
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8; /* Mejora la legibilidad del texto */
+    color: #ffffff; /* Color del texto en la sección sobre nosotros */
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem;
+    background-color: #000000; /* Fondo de la sección de contacto */
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff7b00; /* Color del título en la sección de contacto */
+}
+
+.contact p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #ff7b00; /* Color del texto en la sección de contacto */
+}
+
+/* Footer Section */
+footer {
+    background-color: #161515;
+    color: #ff7b00;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ff7b00; /* Color del texto en el footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-us h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero img.index {
+        width: 100%; /* La imagen se ajusta al ancho del contenedor */
+    }
+}
